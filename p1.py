@@ -88,8 +88,6 @@ if view == "Visual":
             ax[1].bar_label(ax1, fmt='%.1f', label_type='edge')
             plt.tight_layout()
 
-        
-
         #plt.xlabel("Year of Rainfall")
         #plt.ylabel("Rainfall in Cms")
         #plt.title("All India Rainfall", fontsize=20)
@@ -108,5 +106,6 @@ if view == "Visual":
 elif view == "Data":
     st.subheader("Filtered Rainfall Data")
     st.dataframe(filtered.reset_index(drop=True))
+
 
 
