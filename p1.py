@@ -100,7 +100,7 @@ if view == "Visual":
     with col2:
         st.subheader("Insights")
 
-        st.metric(f"Wettest Year {dfrain.year[dfrain.jsmm.idxmax()]}", f"{dfrain.cms.max():.2f} cms")
+        st.metric(f"Wettest Year {dfrain.year[dfrain.jsmm.idxmax()]}", f"{dfrain.cms.max():.2f} cms","hello")
         st.metric(f"Driest Year {dfrain.year[dfrain.jsmm.idxmin()]}", f"{dfrain.cms.min():.2f} cms")
 
         st.metric("Avg Rainfall", f"{dfrain.cms.mean():.2f} cm")
@@ -108,3 +108,4 @@ if view == "Visual":
 elif view == "Data":
     st.subheader("Filtered Rainfall Data")
     st.dataframe(filtered.reset_index(drop=True))
+
